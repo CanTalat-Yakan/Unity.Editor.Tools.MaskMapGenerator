@@ -17,13 +17,14 @@ namespace UnityEssentials
         public static void ShowWindow()
         {
             var editor = new MaskMapGenerator();
-            editor.Window = new EditorWindowDrawer("Mask Map Packer", new(350, 650))
+            editor.Window = EditorWindowDrawer
+                .CreateInstance("Mask Map Packer", new(350, 650))
                 .SetHeader(editor.Header, EditorWindowStyle.Toolbar)
                 .SetBody(editor.Body, EditorWindowStyle.Margin)
                 .SetFooter(editor.Footer, EditorWindowStyle.HelpBox)
                 .GetRepaintEvent(out editor.Repaint)
                 .GetCloseEvent(out editor.Close)
-                .ShowUtility();
+                .ShowAsUtility();
 
             editor.Window.maxSize = new Vector2(350, 650);
         }
