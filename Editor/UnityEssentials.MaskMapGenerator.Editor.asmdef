@@ -2,7 +2,8 @@
     "name": "UnityEssentials.MaskMapGenerator.Editor",
     "rootNamespace": "UnityEssentials",
     "references": [
-        "UnityEssentials.EditorWindowDrawer.Editor"
+        "UnityEssentials.EditorWindowDrawer.Editor",
+        "UnityEssentials.MouseInputFetcher"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
