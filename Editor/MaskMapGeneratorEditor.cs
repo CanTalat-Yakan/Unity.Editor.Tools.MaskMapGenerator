@@ -7,7 +7,7 @@ namespace UnityEssentials
 {
     public partial class MaskMapGenerator
     {
-        public EditorWindowDrawer Window;
+        public EditorWindowBuilder Window;
         public Action Repaint;
         public Action Close;
 
@@ -17,7 +17,7 @@ namespace UnityEssentials
         public static void ShowWindow()
         {
             var editor = new MaskMapGenerator();
-            editor.Window = EditorWindowDrawer
+            editor.Window = EditorWindowBuilder
                 .CreateInstance("Mask Map Packer", new(350, 650))
                 .SetHeader(editor.Header, EditorWindowStyle.Toolbar)
                 .SetBody(editor.Body, EditorWindowStyle.Margin)
